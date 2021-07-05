@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./assets/opensans/opensans.css" />
+      <link rel="stylesheet" href="./styles/main.min.css" />
+      <title>Pop up</title>
+   </head>
+   <body>
+      <button class="btn open-modal">Open Modal</button>
+
+      <div class="overlay">
+         <div class="modal">
+            <div class="modal__content">
+               <img
+                  class="modal__close_btn close-modal"
+                  src="./img/icon-popup-close.svg"
+                  alt="close"
+               />
+               <img
+                  class="modal__alert"
+                  src="./img/icon-warning_notify-red.svg"
+                  alt="alert"
+               />
+               <h1 class="modal__title"
+                  >Are you sure you want to uninstall the Shazam app</h1
+               >
+
+               <button class="btn btn--cancel close-modal"> Cancel </button>
+               <button class="btn btn--accept">Unistall</button>
+            </div>
+         </div>
+      </div>
+      <script src="./js/jquery.min.js"></script>
+      <script src="./js/bundle.min.js"></script>
+   </body>
+</html>

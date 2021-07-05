@@ -1,0 +1,105 @@
+@import 'variables'
+*
+	box-sizing: border-box
+
+body
+	font-family: $mainFont
+	min-height: 100vh
+	display: flex
+	justify-content: center
+	align-items: center
+
+.btn
+   padding: 10px 50px
+   display: inline-block
+   border-radius: 5px
+   font-size: 20px
+   
+   text-decoration: none
+   transition: .35s ease-in-out
+   font-weight: 700
+   cursor: pointer
+
+   font-family: inherit
+   font-weight: 600 
+ 
+
+   &--accept
+      background: $red
+      color: #fff 
+      border: 1px solid #ef233c;
+      &:hover
+         background: darken($red, 10.5%)
+
+   &--cancel 
+      color: $grey
+      border: 1px solid $grey
+      &:hover
+         color: #fff 
+         background: darken($grey, 3.5%)
+
+
+.overlay
+   width: 100%
+   min-height: 100vh
+   display: flex
+   justify-content: center
+   align-items: center
+   flex-direction: column
+   padding: 40px
+   position: fixed
+   top: 0
+   left: 0
+   background: rgba(#000, 0.75)
+   opacity: 0
+   pointer-events: none
+   transition: .35s ease-in-out
+   max-height: 100vh
+   overflow-y: auto
+
+   &--open 
+      opacity: 1
+      pointer-events: inherit 
+
+.modal 
+   width: 700px
+   background: #fff
+   text-align: center
+   box-shadow: 0 1px 10px rgba(#fff, 0.35)
+   opacity: 0
+   pointer-events: none
+   transition: .35s ease-in-out
+   max-height: 100vh
+   overflow-y: auto
+   border-radius: 5px
+
+   &__content 
+      padding: 40px 
+      transform: translate(0, -10px)
+      opacity: 0
+      transition: .35s ease-in-out
+
+   &__title 
+      font-family: inherit
+      font-weight: 300
+
+   &--open 
+      opacity: 1
+      pointer-events: inherit
+      .modal__content 
+         transform: translate(0, -0)
+         opacity: 1
+
+   &__close_btn
+      position: absolute
+      left: 10px
+      top: 10px
+      cursor: pointer
+
+   &__alert
+      height: 150px
+
+
+
+
+
